@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import Context from '../../GlobalState/Context'
-
+import Header from '../../Components/Header/Header'
 
 const MainPage = () => {
 
@@ -8,7 +8,7 @@ const MainPage = () => {
 
     return (
         <div>
-            {states.teste}
+                <Header/>
         </div>
     )
 }
