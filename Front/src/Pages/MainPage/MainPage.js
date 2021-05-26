@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import Context from '../../GlobalState/Context'
 import Header from '../../Components/Header/Header'
+import BodyMain from '../../Components/BodyMain/BodyMain'
 
 const MainPage = () => {
 
@@ -9,6 +10,7 @@ const MainPage = () => {
     return (
         <div>
                 <Header/>
+                <BodyMain/>
         </div>
     )
 }
