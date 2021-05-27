@@ -7,9 +7,9 @@ export default function Router() {
 
     return (
 
-        <BrowserRouter>
-            <Switch>
-                <Route exact path="/">                    
+        <BrowserRouter >
+            <Switch >
+                <Route exact path="/" >                    
                     <MainPage/>
                 </Route>
                 
