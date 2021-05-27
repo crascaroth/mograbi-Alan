@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import Context from "../../GlobalState/Context";
 import { Carousel } from "react-bootstrap";
+import Context from "../../GlobalState/Context";
+
 import { CarouselContainer, CarouselImage } from "./BodyMain_styled";
 
 const BodyMain = () => {

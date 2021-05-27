@@ -12,7 +12,7 @@ export const ColLogoMograbi = styled(Col)`
 display:flex;
 align-items: center;
 justify-content: center;
-height: 50vh;
+height: 40vh;
 width: 100%;
 `
 
@@ -21,7 +21,7 @@ display:flex;
 flex-direction: column;
 justify-content:center;
 align-items:left;
-height: 50vh;
+height: 40vh;
 width: 100%;
 padding-bottom: 10vh;
 
