@@ -7,24 +7,29 @@ export const MenuInterativo = styled(Nav)`
   width: 60vw;
   color: white;
 
+  font-size: 1.5em;
   height: 10vh;
 
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-
-  font-size: 2em;
 `;
 
 export const ItemSingular = styled(Nav)`
- .nav.nav-link.a {
+  .nav.nav-link.a {
     color: white !important;
   }
 `;
 
 export const ItemDropdown = styled(NavDropdown)`
-  
   a {
     color: white;
   }
+`;
 
+export const MenuSemImages = styled.div`
+  color: white !important;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  
 `;
