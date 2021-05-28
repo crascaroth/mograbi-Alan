@@ -9,7 +9,7 @@ import {
 
 export const TelephoneRedes = styled(Navbar)`
 width: 100vw;
-height: 10vh;
+height: 6vh;
 background-color: black;
 color: white;
 `

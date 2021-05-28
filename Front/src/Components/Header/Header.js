@@ -40,7 +40,7 @@ const Header = () => {
       <TelefoneRedeSocial />
 
       {/* LOGO */}
-      <Row>
+      <Row style={{margin: 0, padding: 0}}>
         <ColLogoMograbi xs lg="4">
           <Image src={Mograbi_logo} alt="logo" />
         </ColLogoMograbi>

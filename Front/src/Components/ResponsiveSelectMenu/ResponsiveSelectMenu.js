@@ -17,7 +17,7 @@ const ResponsiveSelectMenu = () => {
 
   return (
     <MenuInterativo>
-      <ItemSingular.Link href="#home">Tricoline Lisa</ItemSingular.Link>
+      <ItemSingular.Link >Tricoline Lisa</ItemSingular.Link>
       <ItemDropdown title="Tricoline Rotativa" id="basic-nav-dropdown">
         <ItemDropdown.Item href="#action/3.1">Animais</ItemDropdown.Item>
         <ItemDropdown.Item href="#action/3.2">Bolinhas/Poá</ItemDropdown.Item>
