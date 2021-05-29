@@ -9,6 +9,7 @@ const BodyMain = () => {
 
   return (
     <CarouselContainer>
+      
       <Carousel>
         <Carousel.Item>
           <CarouselImage
