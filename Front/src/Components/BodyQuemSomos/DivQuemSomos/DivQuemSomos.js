@@ -12,7 +12,7 @@ const DivQuemSomos = () => {
   const { states, setters, requests } = useContext(Context);
 
   return (
-    <>
+    
       <ContainerDivQuemSomos>
         <BoxWithPolygons>
           <img src={PolygonPequenoEsquerda}/>
@@ -20,7 +20,7 @@ const DivQuemSomos = () => {
           <img src={PolygonPequenoDireita} />
         </BoxWithPolygons>
       </ContainerDivQuemSomos>
-    </>
+    
   );
 };
 
