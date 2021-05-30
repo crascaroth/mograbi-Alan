@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Col } from "react-bootstrap";
+import { Col, Button } from "react-bootstrap";
 
 import tricoline_liso from "../../Images/tricoline_liso.svg";
 import tricoline_rotativo from "../../Images/tricoline_rotativo.svg";
@@ -20,7 +20,7 @@ export const BoxItem = styled(Col)`
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 5% 5%;
 `;
 
@@ -100,6 +100,16 @@ export const Col32 = styled.div`
   background-position: 25% 25%;
 `;
 
+export const BoxMaisCategorias = styled.div`
+  grid-area: 4 / 1 / 5 / 5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 10vh;
+`;
+
 export const Faixa = styled.div`
   display: flex;
   justify-content: center;
@@ -128,4 +138,16 @@ export const BoxText = styled.div`
 
   width: 20vw;
   height: 15vh;
+`;
+
+export const ButtonMaisCategorias = styled(Button)`
+  text-align: center;
+  text-justify: center;
+
+  height: 100%;
+  font-size: 51px;
+
+  border-radius: 0;
+  border: 3px solid black;
+  padding: 1vh 1vw;
 `;

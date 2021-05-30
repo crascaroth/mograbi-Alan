@@ -6,6 +6,7 @@ display:flex;
 justify-content: center;
 width: 100%;
 height: 30vh;
+margin-bottom: 5vh;
 `
 export const CaixaTextoESetas = styled.div`
 width: 90vw;

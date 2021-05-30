@@ -19,4 +19,6 @@ export const ContainerDivQuemSomos = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-top: 5vh;
 `;

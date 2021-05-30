@@ -9,12 +9,14 @@ import {
   Col32,
   Faixa,
   BoxText,
+  BoxMaisCategorias,
+  ButtonMaisCategorias
 } from "./AllProductsGrid_styled";
+
 
 const AllProductsGrid = () => {
   return (
     <>
-      
       <GridContainer>
         <Col11>
           <Faixa>
@@ -46,6 +48,11 @@ const AllProductsGrid = () => {
             <BoxText>Promoções</BoxText>
           </Faixa>
         </Col32>
+        <BoxMaisCategorias>
+          <ButtonMaisCategorias variant="outlined">
+            + Categorias
+          </ButtonMaisCategorias>
+        </BoxMaisCategorias>
       </GridContainer>
     </>
   );
