@@ -14,10 +14,9 @@ export const MenuInterativo = styled(Nav)`
   align-items: center;
 `;
 
-export const ItemSingular = styled(Nav)`
-  .nav.nav-link.a {
-    color: white !important;
-  }
+export const ItemSingular = styled(Nav.Link)`
+  color: white;
+  
 `;
 
 export const ItemDropdown = styled(NavDropdown)`
@@ -26,10 +25,13 @@ export const ItemDropdown = styled(NavDropdown)`
   }
 `;
 
+export const ItemDropdownModal = styled(ItemDropdown.Item)`
+background-color: black;
+`
+
 export const MenuSemImages = styled.div`
   color: white !important;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  
 `;

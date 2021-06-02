@@ -26,9 +26,9 @@ const MainPage = () => {
         <AllProductsGrid/>
       {/* </Screen> */}
 
-      <Screen style={{backgroundColor: "#3212"}}>
+      {/* <Screen style={{backgroundColor: "#3212"}}> */}
       <Footer/>
-      </Screen>
+      {/* </Screen> */}
 
     </>
   );

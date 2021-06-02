@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { Nav } from "react-bootstrap";
+import { Nav , Carousel} from "react-bootstrap";
 
 export const CarouselImage = styled.img`
 width: 90vw;
-height: 50vh;
+height: auto;
+
 
 `
 export const CarouselContainer = styled(Nav)`
@@ -13,6 +14,15 @@ justify-content:center;
 align-items: center;
 width: 100vw;
 height: 50vh;
+`
+
+export const CarrosselItem = styled(Carousel.Item)`
+width:90vw;
+
+max-width: 90vw;
+max-height: 50vh;
+
+overflow: hidden;
 `
 
 

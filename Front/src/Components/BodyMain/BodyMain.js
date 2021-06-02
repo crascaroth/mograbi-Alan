@@ -8,8 +8,7 @@ const BodyMain = () => {
   const { states, setters, requests } = useContext(Context);
 
   return (
-    <CarouselContainer>
-      
+    <CarouselContainer>      
       <Carousel>
         <Carousel.Item>
           <CarouselImage

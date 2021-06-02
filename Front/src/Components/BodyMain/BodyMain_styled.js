@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export const CarouselImage = styled.img`
 width: auto;
 height: 50vh;
+
 `
 
 
