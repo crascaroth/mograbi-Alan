@@ -5,7 +5,7 @@ import {
   ItemSingular,
   ItemDropdown,
   MenuSemImages,
-  ItemDropdownModal
+  ItemDropdownModal,
 } from "./ResponsiveSelectMenu_styled.js";
 
 import PolygonPequenoDireita from "../../Images/PolygonPequenoDireita.svg";
@@ -13,9 +13,13 @@ import PolygonPequenoEsquerda from "../../Images/PolygonPequenoEsquerda.svg";
 
 import { useContext } from "react";
 import Context from "../../GlobalState/Context";
-import Header from "../../Components/Header/Header";
+
+import { goToPage } from "../../Router/Walker";
+import { useHistory } from "react-router-dom";
 
 const ResponsiveSelectMenu = () => {
+  const history = useHistory();
+
   const { states, setters, requests } = useContext(Context);
 
   useEffect(() => {
@@ -28,13 +32,15 @@ const ResponsiveSelectMenu = () => {
 
       {states.categories.map((category) => {
         if (category.subcategories === []) {
-          return <ItemSingular>{category.categoryName}</ItemSingular>;
+          return <ItemSingular onClick={() => goToPage(history, `/${category.categoryName}`)}>{category.categoryName}</ItemSingular>;
         } else {
           return (
             <ItemDropdown title={category.categoryName}>
               {category.subcategories.map((sub) => {
                 return (
-                  <ItemDropdownModal>{sub.categoryName}</ItemDropdownModal>
+                  <ItemDropdownModal onClick={() => goToPage(history, `/${category.categoryName}/${sub.categoryName}`)}>
+                    {sub.categoryName}
+                  </ItemDropdownModal>
                 );
               })}
             </ItemDropdown>

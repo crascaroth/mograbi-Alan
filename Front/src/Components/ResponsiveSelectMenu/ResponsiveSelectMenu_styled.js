@@ -26,7 +26,8 @@ export const ItemDropdown = styled(NavDropdown)`
 `;
 
 export const ItemDropdownModal = styled(ItemDropdown.Item)`
-background-color: black;
+background-color: white;
+color: black !important;
 `
 
 export const MenuSemImages = styled.div`

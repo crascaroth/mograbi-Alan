@@ -4,14 +4,13 @@ import axios from "axios";
 import { BASE_URL } from "../Constants/url";
 
 const Provider = (props) => {
-  const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const getAllCategories = async () => {
-    console.log("BASE_URL", BASE_URL);
     await axios
       .get(BASE_URL + "/dev/categorys")
       .then((res) => {
-        console.log(res);
         const allCategories = res.data;
         let primaryCat = [];
         let secondaryCat = [];
@@ -23,28 +22,52 @@ const Provider = (props) => {
         }
 
         for (let i = 0; i < primaryCat.length; i++) {
-            secondaryCat[i] = [];
+          secondaryCat[i] = [];
           for (let j = 0; j < allCategories.length; j++) {
             if (primaryCat[i].pk === allCategories[j].categorylvl1) {
-                secondaryCat[i].push(allCategories[j]);
+              secondaryCat[i].push(allCategories[j]);
             }
           }
-          primaryCat[i]["subcategories"] = secondaryCat[i]
+          primaryCat[i]["subcategories"] = secondaryCat[i];
         }
-
-
-        console.log("primaryCategories", primaryCat)
-        setCategories(primaryCat)
-        // console.log("secondaryCat", secondaryCat);
+        setCategories(primaryCat);
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-  const states = { categories };
-  const setters = { setCategories };
-  const requests = { getAllCategories };
+  const getAllProducts = async () => {
+    await axios
+      .get(BASE_URL + "/dev/products")
+      .then((res) => {
+        let productsArray =[]
+        for(let i=0; i<res.data.length;i++){
+          if(res.data[i].productPicture){
+            productsArray.push(res.data[i])
+          }
+        }
+        setProducts(productsArray);
+        console.log("setProducts", res.data);
+        const result = res.data 
+
+        let tags = []
+
+        for (let i = 0; i < result.length; i++) {
+          if(result[i].productTag !== []){
+            tags.push(result[i].productTag)
+          }
+        }
+        console.log(tags)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const states = { categories, products };
+  const setters = { setCategories, setProducts };
+  const requests = { getAllCategories, getAllProducts };
 
   const data = { states, setters, requests };
 

@@ -37,13 +37,14 @@ const BaseCol = styled.div`
   background-repeat: no-repeat;
   background-position: 25% 25%;
 
-  :hover{
-    cursor:pointer;
+  :hover {
+    cursor: pointer;
   }
 `;
 export const Col11 = styled(BaseCol)`
   grid-area: 1 / 2 / 2 / 3;
-  
+
+  box-shadow: 0.5vh 0.5vw 1vw;
 
   background-image: url(${tricoline_liso});
 `;
@@ -51,12 +52,15 @@ export const Col11 = styled(BaseCol)`
 export const Col12 = styled(BaseCol)`
   grid-area: 1 / 3 / 2 / 4;
 
-  background-image: url(${tricoline_rotativo});
+  box-shadow: 0.5vh 0.5vw 1vw;
 
+  background-image: url(${tricoline_rotativo});
 `;
 
 export const Col21 = styled(BaseCol)`
   grid-area: 2 / 2 / 3 / 3;
+
+  box-shadow: 0.5vh 0.5vw 1vw;
 
   background-image: url(${tricoline_digital});
 `;
@@ -64,16 +68,22 @@ export const Col21 = styled(BaseCol)`
 export const Col22 = styled(BaseCol)`
   grid-area: 2 / 3 / 3 / 4;
 
+  box-shadow: 0.5vh 0.5vw 1vw;
+
   background-image: url(${viscose_digital});
 `;
 
 export const Col31 = styled(BaseCol)`
   grid-area: 3 / 2 / 4 / 3;
 
+  box-shadow: 0.5vh 0.5vw 1vw;
+
   background-image: url(${viscolise_lisa});
 `;
 export const Col32 = styled(BaseCol)`
   grid-area: 3 / 3 / 4 / 4;
+
+  box-shadow: 0.5vh 0.5vw 1vw;
 
   background-image: url(${promocoes});
 `;
