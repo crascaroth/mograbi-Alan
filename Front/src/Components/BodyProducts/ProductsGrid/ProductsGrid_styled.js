@@ -41,13 +41,19 @@ export const BoxImage = styled.div`
 export const ImgProduct = styled.img`
   height: 25vh;
   width: auto;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const TextBox = styled.div`
   display: flex;
   flex-direction: column;
-
   margin: 0 0.5vw;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const TitleProductCard = styled.div`

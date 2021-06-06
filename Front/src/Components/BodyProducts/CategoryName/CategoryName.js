@@ -4,27 +4,22 @@ import Line from "../../../Images/Line.svg";
 import { ImgLine, TitleCategory, BoxCategoryName } from "./CategoryName_styled";
 
 const CategoryName = () => {
-    const category = useParams()
-    console.log("category", category)
-
-  if (category === {}) {
-    return (
-      <BoxCategoryName>
-        <ImgLine src={Line} />
-        <TitleCategory>Ver Todos</TitleCategory>
-        <ImgLine src={Line} />
-      </BoxCategoryName>
-    );
+  const category = useParams();
+  console.log("category", category);
+  let titleCategory = "";
+  if (category.categoryName && category.subCategoryName) {
+    titleCategory = category.categoryName + "/" + category.subCategoryName;
+  } else {
+    titleCategory = "Ver Todos";
   }
-  else{
-    return (
-        <BoxCategoryName>
-          <ImgLine src={Line}/>
-          <TitleCategory>{category.categoryName}/{category.subCategoryName}</TitleCategory>
-          <ImgLine src={Line}/>
-        </BoxCategoryName>
-      );
-  }
+  //category.categoryName}/{category.subCategoryName
+  return (
+    <BoxCategoryName>
+      <ImgLine src={Line} />
+      <TitleCategory>{titleCategory}</TitleCategory>
+      <ImgLine src={Line} />
+    </BoxCategoryName>
+  );
 };
 
 export default CategoryName;

@@ -19,6 +19,7 @@ import searchIcon from "../../Images/search.svg";
 import cartIcon from "../../Images/cart.svg";
 
 import Mograbi_logo from "../../Images/Mograbi_logo.svg";
+import {useHistory} from "react-router-dom";
 
 import {
   ColLogoMograbi,
@@ -31,8 +32,10 @@ import {
   ButtonCart,
   RowResponsiveMenu
 } from "./Header_styled.js";
+import { goToPage } from "../../Router/Walker";
 
 const Header = () => {
+  const history = useHistory();
   const { states, setters, requests } = useContext(Context);
 
   return (
@@ -41,7 +44,7 @@ const Header = () => {
 
       {/* LOGO */}
       <Row style={{margin: 0, padding: 0}}>
-        <ColLogoMograbi xs lg="4">
+        <ColLogoMograbi xs lg="4" onClick={() => goToPage(history, "/")}>
           <Image src={Mograbi_logo} alt="logo" />
         </ColLogoMograbi>
         {/* Coluna com navbar, botões e search */}
@@ -69,7 +72,7 @@ const Header = () => {
             <Col>
               <ButtonWishList variant="outlined">
                 <Image src={heartIcon} alt="heart" />
-                Wishlist
+                Lista de Desejos
               </ButtonWishList>
             </Col>
 

@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import MainPage from "../Pages/MainPage/MainPage";
 import ProductsPage from "../Pages/ProductsPage/ProductsPage";
-import ProductDetailPage from "../Pages/ProductDetailPage/ProductDetailPage"
+import ProductDetailPage from "../Pages/ProductDetailPage/ProductDetailPage";
 
 export default function Router() {
   return (
@@ -10,6 +10,10 @@ export default function Router() {
       <Switch>
         <Route exact path="/">
           <MainPage />
+        </Route>        
+
+        <Route exact path="/product/:id">
+          <ProductDetailPage />
         </Route>
 
         <Route exact path="/all/products">
@@ -18,10 +22,6 @@ export default function Router() {
 
         <Route exact path="/:categoryName/:subCategoryName">
           <ProductsPage />
-        </Route>
-
-        <Route exact path="/product/:id">
-          <ProductDetailPage/>
         </Route>
       </Switch>
     </BrowserRouter>

@@ -11,7 +11,7 @@ import {
   AdicionarCarrinho,
   HeartButton,
   BoxImage,
-  Products
+  Products,
 } from "./ProductsGrid_styled";
 
 import whiteHeartIcon from "../../../Images/whiteHeartIcon.svg";
@@ -28,11 +28,16 @@ const ProductsGrid = () => {
     <Products>
       {states.products.map((product) => {
         return (
-          <BoxProduct onClick={() => goToPage(history, `/product/${product.pk}`)}>
+          <BoxProduct>
             <BoxImage>
-              <ImgProduct src={product.productPicture[0]} />
+              <ImgProduct
+                onClick={() => goToPage(history, `/product/${product.pk}`)}
+                src={product.productPicture[0]}
+              />
             </BoxImage>
-            <TextBox>
+            <TextBox
+              onClick={() => goToPage(history, `/product/${product.pk}`)}
+            >
               <TitleProductCard>{product.productName}</TitleProductCard>
               <Preco>R$ {product.productValue}</Preco>
             </TextBox>
