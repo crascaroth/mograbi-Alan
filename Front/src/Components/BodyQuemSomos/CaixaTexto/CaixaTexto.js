@@ -5,6 +5,7 @@ import {
   Container,
   SetaEsquerda,
   SetaDireita,
+  RowTexto
 } from "./CaixaTexto_styled";
 import { Row, Col } from "react-bootstrap";
 
@@ -15,26 +16,27 @@ const CaixaTexto = () => {
   return (
     <Container>
       <CaixaTextoESetas>
-        <Row>
-          <SetaEsquerda>
+        <RowTexto>
+          <SetaEsquerda >
             <img src={PolygonEsquerda} />
           </SetaEsquerda>
-          <ColunasGrid>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata
+          <ColunasGrid style={{gridArea: 1 / 2 / 2 / 3}}>
+            A “Mograbi Tecidos” foi criada e idealizada pelos sucessores da
+            tradicional “Casa Miro”, loja de tecidos no Rio de Janeiro, fundada
+            em 1939. Loja na qual 4 gerações da família Mograbi atuaram e lá
+            aprenderam como funcionava a arte de admirar e vender tecidos.
           </ColunasGrid>
-          <ColunasGrid>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata
+          <ColunasGrid style={{gridArea: 1 / 3 / 2 / 4}}>
+            A Mograbi está no mercado têxtil desde 2007, atuando hoje com o
+            intuito de vender e distribuir tecidos com estampas diferenciadas e
+            exclusivas. Mesmo após sucessivas crises conseguimos superar todos
+            esses os obstáculos com um trabalho bem feito e consequentemente um
+            estrondoso sucesso.
           </ColunasGrid>
           <SetaDireita>
             <img src={PolygonDireita} />
           </SetaDireita>
-        </Row>
+        </RowTexto>
       </CaixaTextoESetas>
     </Container>
   );

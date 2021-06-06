@@ -14,6 +14,9 @@ align-items: center;
 justify-content: center;
 height: 40vh;
 width: 100%;
+:hover{
+  cursor:pointer;
+}
 `
 
 export const ColLadoLogo = styled(Col)`

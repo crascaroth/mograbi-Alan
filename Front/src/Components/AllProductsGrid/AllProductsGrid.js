@@ -1,4 +1,6 @@
 import { Col, Row } from "react-bootstrap";
+import { goToPage } from "../../Router/Walker";
+import { useHistory } from "react-router-dom";
 import {
   GridContainer,
   Col11,
@@ -10,40 +12,42 @@ import {
   Faixa,
   BoxText,
   BoxMaisCategorias,
-  ButtonMaisCategorias
+  ButtonMaisCategorias,
 } from "./AllProductsGrid_styled";
 
 
 const AllProductsGrid = () => {
+  const history = useHistory();
+
   return (
     <>
       <GridContainer>
-        <Col11>
+        <Col11 onClick={() => goToPage(history, "/all/products")}>
           <Faixa>
             <BoxText>Tricoline Lisa</BoxText>
           </Faixa>
         </Col11>
-        <Col12>
+        <Col12 onClick={() => goToPage(history, "/all/products")}>
           <Faixa>
             <BoxText>Tricoline Rotativa</BoxText>
           </Faixa>
         </Col12>
-        <Col21>
+        <Col21 onClick={() => goToPage(history, "/all/products")}>
           <Faixa>
             <BoxText>Tricoline Digital</BoxText>
           </Faixa>
         </Col21>
-        <Col22>
+        <Col22 onClick={() => goToPage(history, "/all/products")}>
           <Faixa>
             <BoxText>Viscose Digital</BoxText>
           </Faixa>
         </Col22>
-        <Col31>
+        <Col31 onClick={() => goToPage(history, "/all/products")}>
           <Faixa>
             <BoxText>Viscose Lisa</BoxText>
           </Faixa>
         </Col31>
-        <Col32>
+        <Col32 onClick={() => goToPage(history, "/all/products")}>
           <Faixa>
             <BoxText>Promoções</BoxText>
           </Faixa>

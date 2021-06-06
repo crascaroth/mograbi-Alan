@@ -1,27 +1,29 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import MainPage from '../Pages/MainPage/MainPage'
-
+import MainPage from "../Pages/MainPage/MainPage";
+import ProductsPage from "../Pages/ProductsPage/ProductsPage";
+import ProductDetailPage from "../Pages/ProductDetailPage/ProductDetailPage";
 
 export default function Router() {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <MainPage />
+        </Route>        
 
-    return (
+        <Route exact path="/product/:id">
+          <ProductDetailPage />
+        </Route>
 
-        <BrowserRouter >
-            <Switch >
-                <Route exact path="/" >                    
-                    <MainPage/>
-                </Route>
-                
-                <Route exact path="/1">
-                    
-                </Route>
+        <Route exact path="/all/products">
+          <ProductsPage />
+        </Route>
 
-                <Route exact path="/2">
-                    
-                </Route>
-
-            </Switch>
-        </BrowserRouter>
-    )
+        <Route exact path="/:categoryName/:subCategoryName">
+          <ProductsPage />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
 }
