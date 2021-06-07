@@ -35,14 +35,14 @@ const ResponsiveSelectMenu = () => {
           return <ItemSingular onClick={() => goToPage(history, `/${category.categoryName}`)}>{category.categoryName}</ItemSingular>;
         } else {
           return (
-            <ItemDropdown title={category.categoryName}>
-              {category.subcategories.map((sub) => {
+            <ItemDropdown onClick={()=> goToPage(history, `/${category.categoryName}`)}title={category.categoryName}>
+              {/* {category.subcategories.map((sub) => {
                 return (
                   <ItemDropdownModal onClick={() => goToPage(history, `/${category.categoryName}/${sub.categoryName}`)}>
                     {sub.categoryName}
                   </ItemDropdownModal>
                 );
-              })}
+              })} */}
             </ItemDropdown>
           );
         }

@@ -20,14 +20,14 @@ const BodyProducts = () => {
 
   return (
     <>
-      <Breadcrumbs>Breadcrumbs</Breadcrumbs>
+      {/* <Breadcrumbs>Breadcrumbs</Breadcrumbs> */}
       <CategoryName />
       <GridContainer>
-        <FiltroTags>
+        {/* <FiltroTags>
           <BoxFiltroTags />
-        </FiltroTags>
+        </FiltroTags> */}
         <ProductsGrid />
-        <Pages>Pages</Pages>
+        {/* <Pages>Pages</Pages> */}
       </GridContainer>
     </>
   );

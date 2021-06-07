@@ -74,7 +74,7 @@ export const LerMais = styled.div`
 `;
 
 export const InformacoesProduct = styled.div`
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -104,9 +104,9 @@ export const BoxInformacoesProduct = styled.div`
   justify-content: center;
   align-items: flex-start;
   background-color: #f6f6f6;
-  width: 80vh   60vw;
+  width: 80vh 60vw;
   max-width: 60vw;
-  padding:2vh 1vw;
+  padding: 2vh 1vw;
 
   margin: 10vh 0;
 `;

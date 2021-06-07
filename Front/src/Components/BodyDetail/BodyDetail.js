@@ -58,7 +58,6 @@ import LogoPrecoMetro from "../../Images/LogoPrecoMetro.svg";
 import LogoPedidoMinimo from "../../Images/LogoPedidoMinimo.svg";
 import { useEffect } from "react";
 import Context from "../../GlobalState/Context";
-import axios from "axios";
 
 const BodyDetail = () => {
   const { states, setters, requests } = useContext(Context);
