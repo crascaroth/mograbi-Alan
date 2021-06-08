@@ -9,6 +9,7 @@ export const CarouselImage = styled.img`
 `;
 
 export const CarouselContainer = styled(Nav)`
+margin-top:5vh;
   display: flex;
   justify-content: center;
   align-items: center;
