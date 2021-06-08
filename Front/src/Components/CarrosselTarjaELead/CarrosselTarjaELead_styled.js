@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import BannerPromocao from "../../Images/BannerPromocao.svg";
 
+
+import "react-multi-carousel/lib/styles.css";
+
 export const TarjaPromocao = styled.div`
   background-image: url("${BannerPromocao}");
   width: 100%;
@@ -47,40 +50,8 @@ export const ButtonComprar = styled(Button)`
   font-weight: bold;
 `;
 
-export const CarrosselContainer = styled.div`
-  align-items: center;
-  display: flex;
-  margin: 2rem auto;
-  overflow: hidden;
-  position: relative;
-  width: 300px;
-`;
 
-export const CarrosselBox = styled.div``;
-export const CarrosselItem = styled.div`
-  display: flex;
-  transform: translateX(0);
-  transition: transform 0.25s;
-`;
 
-const BaseButton = styled(Button)`
-  background: teal;
-  border: 0;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: bold;
-  height: 3rem;
-  opacity: 0.25;
-  position: absolute;
-  transition: opacity 0.25s;
-  width: 3rem;
-  z-index: 1;
-`;
-
-export const PreviousButton = styled(BaseButton)``;
-export const NextButton = styled(BaseButton)``;
 
 export const ContainerLead = styled.div`
   display: flex;
@@ -116,15 +87,14 @@ export const TextoLead = styled.div`
 export const InputNome = styled.input`
   font-size: 30px;
   border-radius: 0;
-  
 `;
 export const InputEmail = styled.input`
   font-size: 30px;
   border-radius: 0;
 `;
 export const ButtonAssinar = styled(Button)`
-background-color:white;
-color:black;
-font-size: 26px;
-border-radius: 0;
+  background-color: white;
+  color: black;
+  font-size: 26px;
+  border-radius: 0;
 `;

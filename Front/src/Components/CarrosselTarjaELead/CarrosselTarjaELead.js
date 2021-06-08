@@ -1,9 +1,4 @@
 import {
-  CarrosselContainer,
-  PreviousButton,
-  CarrosselBox,
-  CarrosselItem,
-  NextButton,
   TarjaPromocao,
   BoxTextoButton,
   ButtonComprar,
@@ -18,16 +13,31 @@ import {
   InputEmail,
   ButtonAssinar,
 } from "./CarrosselTarjaELead_styled";
-import Item1 from "../../Images/Item1.svg";
-import Item2 from "../../Images/Item2.svg";
-import Item3 from "../../Images/Item3.svg";
-import Item4 from "../../Images/Item4.svg";
-import Item5 from "../../Images/Item5.svg";
+
+import {
+  TextQuemSomos,
+  ContainerDivQuemSomos,
+  BoxWithPolygons,
+} from "../BodyQuemSomos/DivQuemSomos/DivQuemSomos_styled";
+
 import iconLead from "../../Images/iconLead.svg";
+import Carrossel from "./Carrossel/Carrossel.js";
+import PolygonPequenoDireita from "../../Images/PolygonPequenoDireita.svg";
+import PolygonPequenoEsquerda from "../../Images/PolygonPequenoEsquerda.svg";
 
 const CarrosselTarjaELead = () => {
   return (
     <>
+      <ContainerDivQuemSomos>
+        <BoxWithPolygons>
+          <img src={PolygonPequenoEsquerda} />
+          <TextQuemSomos>Mais Vendidos</TextQuemSomos>
+          <img src={PolygonPequenoDireita} />
+        </BoxWithPolygons>
+      </ContainerDivQuemSomos>
+
+      <Carrossel inicio={0} fim={4} />
+
       {/* Tarja */}
       <TarjaPromocao>
         <BoxTextoButton>
@@ -40,35 +50,36 @@ const CarrosselTarjaELead = () => {
       </TarjaPromocao>
 
       {/* Carrossel */}
-      <CarrosselContainer>
-        <PreviousButton id="previous">A</PreviousButton>
-        <CarrosselBox>
-          <CarrosselItem>
-            <img src={Item1} />
-          </CarrosselItem>
-          <CarrosselItem>
-            <img src={Item2} />
-          </CarrosselItem>
-          <CarrosselItem>
-            <img src={Item3} />
-          </CarrosselItem>
-          <CarrosselItem>
-            <img src={Item4} />
-          </CarrosselItem>
-          <CarrosselItem>
-            <img src={Item5} />
-          </CarrosselItem>
-        </CarrosselBox>
-        <NextButton id="next">B</NextButton>
-      </CarrosselContainer>
+
+      <ContainerDivQuemSomos>
+        <BoxWithPolygons>
+          <img src={PolygonPequenoEsquerda} />
+          <TextQuemSomos>Lançamentos</TextQuemSomos>
+          <img src={PolygonPequenoDireita} />
+        </BoxWithPolygons>
+      </ContainerDivQuemSomos>
+
+      <Carrossel inicio={5} fim={9} />
+
+      <ContainerDivQuemSomos>
+        <BoxWithPolygons>
+          <img src={PolygonPequenoEsquerda} />
+          <TextQuemSomos>Em Promoção</TextQuemSomos>
+          <img src={PolygonPequenoDireita} />
+        </BoxWithPolygons>
+      </ContainerDivQuemSomos>
+
+      
+
+      <Carrossel inicio={9} fim={13} />
 
       {/* Lead */}
       <ContainerLead>
         <BoxLead>
           <ImgLead src={iconLead}></ImgLead>
           <TextoLead>Receba nossas ofertas, cupons e novidades!</TextoLead>
-          <InputNome placeholder="Digite seu nome"/>
-          <InputEmail placeholder="Digite seu e-mail"/>
+          <InputNome placeholder="Digite seu nome" />
+          <InputEmail placeholder="Digite seu e-mail" />
           <ButtonAssinar>Assinar</ButtonAssinar>
         </BoxLead>
       </ContainerLead>
