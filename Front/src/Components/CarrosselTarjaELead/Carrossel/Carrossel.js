@@ -41,13 +41,16 @@ const Carrossel = (props) => {
     },
   };
 
+
   let entradaCortada = entrada.slice(props.inicio, props.fim);
   console.log("entradaCortada", entradaCortada, typeof entradaCortada);
 
   return (
     <CarrosselContainer>
       {/* <PreviousButton id="previous">A</PreviousButton> */}
-      <CarrosselBox responsive={responsive}>
+      <CarrosselBox responsive={responsive}
+      
+      >
         {entradaCortada.map((product) => {
           return (
             <CarrosselItem>

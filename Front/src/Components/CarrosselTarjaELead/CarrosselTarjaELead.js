@@ -69,8 +69,6 @@ const CarrosselTarjaELead = () => {
         </BoxWithPolygons>
       </ContainerDivQuemSomos>
 
-      
-
       <Carrossel inicio={9} fim={13} />
 
       {/* Lead */}
@@ -83,6 +81,15 @@ const CarrosselTarjaELead = () => {
           <ButtonAssinar>Assinar</ButtonAssinar>
         </BoxLead>
       </ContainerLead>
+
+      {/* <ContainerDivQuemSomos>
+        <BoxWithPolygons>
+          <img src={PolygonPequenoEsquerda} />
+          <TextQuemSomos>Depoimentos</TextQuemSomos>
+          <img src={PolygonPequenoDireita} />
+        </BoxWithPolygons>
+      </ContainerDivQuemSomos> */}
+
     </>
   );
 };

@@ -1,28 +1,23 @@
-import styled from 'styled-components';
-import { Nav , Carousel} from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+import styled from "styled-components";
+import Carousel from "react-multi-carousel";
 
 export const CarouselImage = styled.img`
-width: 90vw;
-height: auto;
+  display: block;
+  width: auto;
+  height: 50vh;
+`;
 
-
-`
 export const CarouselContainer = styled(Nav)`
-margin-top:5vh;
-display: flex;
-justify-content:center;
-align-items: center;
-width: 100vw;
-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+
+`;
+
+
+export const CarouselBox = styled(Carousel)`
+width: 90vw;
 `
-
-export const CarrosselItem = styled(Carousel.Item)`
-width:90vw;
-
-max-width: 90vw;
-max-height: 50vh;
-
-overflow: hidden;
-`
-
-
