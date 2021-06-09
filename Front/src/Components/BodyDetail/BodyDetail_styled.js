@@ -3,25 +3,33 @@ import Button from "react-bootstrap/Button";
 
 export const ImgProductDetail = styled.img`
   height: 70vh;
+  width: auto;
+  
 `;
 
 export const ContainerImageInfo = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0px 5%;
 
   width: 100%;
-  padding: 0 20vw;
+  padding: 0 15vw;
 `;
 export const BoxProductImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  
+  
   grid-area: 1 / 1 / 2 / 2;
 `;
 export const BoxInfo = styled.div`
   grid-area: 1 / 2 / 2 / 3;
+  width:30vw;
+  /* background-color: pink; */
+  
 `;
 export const NomeCompWish = styled.div`
   display: flex;
@@ -92,7 +100,9 @@ export const BoxLarguraPrecometroPedidominimo = styled.div`
 
 const ImgBase = styled.img``;
 
-export const ImgLargura = styled(ImgBase)``;
+export const ImgLargura = styled(ImgBase)`
+
+`;
 
 export const ImgPrecoMetro = styled(ImgBase)``;
 

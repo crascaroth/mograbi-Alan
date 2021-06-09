@@ -59,18 +59,28 @@ import LogoPedidoMinimo from "../../Images/LogoPedidoMinimo.svg";
 import { useEffect } from "react";
 import Context from "../../GlobalState/Context";
 
+import { entrada } from "../../Constants/ProdutosTeste";
+
 const BodyDetail = () => {
   const { states, setters, requests } = useContext(Context);
 
   const [comprimento, setComprimento] = useState(1);
 
   const Params = useParams();
+
   let product = { productPicture: ["zero"] };
+  // product = states.productDetail
+  for(let i=0; i < entrada.length; i++) {
+    if(Params.id === entrada[i].pk){
+      product = entrada[i]
+    }
+  }
+  
 
   // requests.getProductDetails(Params.id)
-  if (states.productDetail) {
-    product = states.productDetail;
-  }
+  // if (states.productDetail) {
+  //   product = states.productDetail;
+  // }
 
   useEffect(() => {
     (async () => requests.getProductDetails(Params.id))();
@@ -103,7 +113,7 @@ const BodyDetail = () => {
           {/* LINHA 1 */}
           <NomeCompWish>
             <NomeComp>
-              <NomeDoProduto>Nome do Produto</NomeDoProduto>
+              <NomeDoProduto>{product.productName}</NomeDoProduto>
               <Composition>50% Algodão</Composition>
             </NomeComp>
 
@@ -114,10 +124,7 @@ const BodyDetail = () => {
 
           {/* LINHA 2 */}
           <AboutProduct>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            {product.productDescription}
           </AboutProduct>
           <ContainerLerMais>
             <LerMais>Ler Mais</LerMais>
@@ -134,14 +141,14 @@ const BodyDetail = () => {
               <ImgPrecoMetro src={LogoPrecoMetro}></ImgPrecoMetro>
               <TextoPrecoMetro>Preço do Metro</TextoPrecoMetro>
               <TextoPrecoMetro style={{ fontWeight: "bold" }}>
-                R$23,40
+                R${product.productValue}
               </TextoPrecoMetro>
             </ContainerPrecoMetro>
             <ContainerPedidoMinimo>
               <ImgPedidoMinimo src={LogoPedidoMinimo}></ImgPedidoMinimo>
               <TextoPedidoMinimo>Pedido Minimo</TextoPedidoMinimo>
               <TextoPedidoMinimo style={{ fontWeight: "bold" }}>
-                100 cm
+                {product.productQtd} cm
               </TextoPedidoMinimo>
             </ContainerPedidoMinimo>
           </BoxLarguraPrecometroPedidominimo>
@@ -163,7 +170,7 @@ const BodyDetail = () => {
               <BoxPreço>
                 <SideBySide>
                   <DivPor>Por</DivPor>
-                  <Preco>R$23,40</Preco>
+                  <Preco>R${(Number(product.productValue)*comprimento).toFixed(2)}</Preco>
                 </SideBySide>
                 <SubPreco>
                   Parcele em até 6x de R$5,48 s/juros Parcela mínima R$30
@@ -198,53 +205,7 @@ const BodyDetail = () => {
             Informações do Produto
           </TitleInformacoesProduct>
           <TextInformacoesProduct>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-            justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-            takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-            sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-            amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-            diam nonumy eirmod tempor invidunt ut labore et dolore magna
-            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-            duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-            sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-            ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-            eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-            magna aliquyam erat, sed diam
+            {product.productDescription}
           </TextInformacoesProduct>
         </BoxInformacoesProduct>
       </InformacoesProduct>

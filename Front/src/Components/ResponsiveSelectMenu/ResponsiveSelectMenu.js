@@ -17,10 +17,15 @@ import Context from "../../GlobalState/Context";
 import { goToPage } from "../../Router/Walker";
 import { useHistory } from "react-router-dom";
 
+import {entradaMenu} from "../../Constants/ProdutosTeste"
+
 const ResponsiveSelectMenu = () => {
   const history = useHistory();
 
   const { states, setters, requests } = useContext(Context);
+
+  const entrada = entradaMenu
+  // const entrada = states.category
 
   useEffect(() => {
     requests.getAllCategories();
@@ -30,23 +35,24 @@ const ResponsiveSelectMenu = () => {
     <MenuInterativo>
       <img src={PolygonPequenoEsquerda} />
 
-      {states.categories.map((category) => {
-        if (category.subcategories === []) {
+      {entrada.map((category) => {
+        // if (category.subcategories === []) {
           return <ItemSingular onClick={() => goToPage(history, `/${category.categoryName}`)}>{category.categoryName}</ItemSingular>;
-        } else {
-          return (
-            <ItemDropdown onClick={()=> goToPage(history, `/${category.categoryName}`)}title={category.categoryName}>
-              {/* {category.subcategories.map((sub) => {
-                return (
-                  <ItemDropdownModal onClick={() => goToPage(history, `/${category.categoryName}/${sub.categoryName}`)}>
-                    {sub.categoryName}
-                  </ItemDropdownModal>
-                );
-              })} */}
-            </ItemDropdown>
-          );
-        }
-      })}
+        // } else {
+        //   return (
+        //     <ItemDropdown onClick={()=> goToPage(history, `/${category.categoryName}`)}title={category.categoryName}>
+        //       {/* {category.subcategories.map((sub) => {
+        //         return (
+        //           <ItemDropdownModal onClick={() => goToPage(history, `/${category.categoryName}/${sub.categoryName}`)}>
+        //             {sub.categoryName}
+        //           </ItemDropdownModal>
+        //         );
+        //       })} */}
+        //     </ItemDropdown>
+          // );
+        // }
+      }
+      )}
 
       <img src={PolygonPequenoDireita} />
     </MenuInterativo>

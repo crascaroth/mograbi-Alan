@@ -23,6 +23,9 @@ export default function Router() {
         <Route exact path="/:categoryName/:subCategoryName">
           <ProductsPage />
         </Route>
+        <Route exact path="/:categoryName">
+          <ProductsPage />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

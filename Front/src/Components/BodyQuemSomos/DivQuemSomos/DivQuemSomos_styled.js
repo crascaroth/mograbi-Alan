@@ -5,7 +5,7 @@ export const TextQuemSomos = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  width: 25vw;
+  width: 30vw;
   height: 10vh;
   font-size: 4em;
 `;

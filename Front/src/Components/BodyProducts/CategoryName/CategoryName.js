@@ -7,8 +7,8 @@ const CategoryName = () => {
   const category = useParams();
   console.log("category", category);
   let titleCategory = "";
-  if (category.categoryName && category.subCategoryName) {
-    titleCategory = category.categoryName + "/" + category.subCategoryName;
+  if (category.categoryName) {
+    titleCategory = category.categoryName 
   } else {
     titleCategory = "Ver Todos";
   }
