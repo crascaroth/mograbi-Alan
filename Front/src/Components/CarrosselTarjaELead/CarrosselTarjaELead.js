@@ -24,8 +24,12 @@ import iconLead from "../../Images/iconLead.svg";
 import Carrossel from "./Carrossel/Carrossel.js";
 import PolygonPequenoDireita from "../../Images/PolygonPequenoDireita.svg";
 import PolygonPequenoEsquerda from "../../Images/PolygonPequenoEsquerda.svg";
+import { useHistory } from "react-router-dom";
+import { goToPage } from "../../Router/Walker";
 
 const CarrosselTarjaELead = () => {
+  const history = useHistory()
+
   return (
     <>
       <ContainerDivQuemSomos>
@@ -39,7 +43,7 @@ const CarrosselTarjaELead = () => {
       <Carrossel inicio={0} fim={4} />
 
       {/* Tarja */}
-      <TarjaPromocao>
+      <TarjaPromocao onClick={() => goToPage(history,"/Ver%20Todos")}>
         <BoxTextoButton>
           <BoxPromocao>
             <TextoOff>50% OFF</TextoOff>

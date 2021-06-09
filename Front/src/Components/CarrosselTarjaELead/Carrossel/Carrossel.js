@@ -20,9 +20,12 @@ import {
 } from "./Carrossel_styled";
 
 import { entrada } from "../../../Constants/ProdutosTeste";
+import { goToPage } from "../../../Router/Walker";
+import { useHistory } from "react-router-dom";
 
 const Carrossel = (props) => {
   console.log(props);
+  const history = useHistory();
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -41,20 +44,19 @@ const Carrossel = (props) => {
     },
   };
 
-
   let entradaCortada = entrada.slice(props.inicio, props.fim);
   console.log("entradaCortada", entradaCortada, typeof entradaCortada);
 
   return (
     <CarrosselContainer>
       {/* <PreviousButton id="previous">A</PreviousButton> */}
-      <CarrosselBox responsive={responsive}
-      
-      >
+      <CarrosselBox responsive={responsive}>
         {entradaCortada.map((product) => {
           return (
             <CarrosselItem>
-              <CardItem>
+              <CardItem
+                onClick={() => goToPage(history, `/product/${product.pk}`)}
+              >
                 <ImgProduct src={product.productPicture[0]} />
                 <TituloCard>{product.productName}</TituloCard>
                 <SubTituloCard>{product.ProductCtg}</SubTituloCard>
