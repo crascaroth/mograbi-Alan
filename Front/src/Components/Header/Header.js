@@ -10,6 +10,13 @@ import {
   Row,
   Image,
 } from "react-bootstrap";
+
+import {
+  ImageSearchIcon,
+  ImagePersonIcon,
+  ImageHeartIcon,
+  ImageCartIcon
+} from "./Header_styled"
 import ResponsiveSelectMenu from "../ResponsiveSelectMenu/ResponsiveSelectMenu";
 import TelefoneRedeSocial from "./TelefoneRedeSocial/TelefoneRedeSocial.js";
 
@@ -30,7 +37,8 @@ import {
   ButtonMinhaConta,
   ButtonWishList,
   ButtonCart,
-  RowResponsiveMenu
+  RowResponsiveMenu,
+  ImageMograbiLogo
 } from "./Header_styled.js";
 import { goToPage } from "../../Router/Walker";
 
@@ -45,7 +53,7 @@ const Header = () => {
       {/* LOGO */}
       <Row style={{margin: 0, padding: 0}}>
         <ColLogoMograbi xs lg="4" onClick={() => goToPage(history, "/")}>
-          <Image src={Mograbi_logo} alt="logo" />
+          <ImageMograbiLogo src={Mograbi_logo} alt="logo" />
         </ColLogoMograbi>
         {/* Coluna com navbar, botões e search */}
         <ColLadoLogo>
@@ -57,13 +65,13 @@ const Header = () => {
                   placeholder="Digite aqui o que procura..."
                 />
                 <Button variant="primary">
-                  <Image src={searchIcon} alt="search" />
+                  <ImageSearchIcon src={searchIcon} alt="search" />
                 </Button>
               </FormSearch>
             </Col>
             <Col>
               <ButtonMinhaConta variant="outlined">
-                <Image src={personIcon} alt="person" />
+                <ImagePersonIcon src={personIcon} alt="person" />
                 Minha Conta
                 <personIcon />
               </ButtonMinhaConta>
@@ -71,14 +79,14 @@ const Header = () => {
 
             <Col>
               <ButtonWishList variant="outlined">
-                <Image src={heartIcon} alt="heart" />
+                <ImageHeartIcon src={heartIcon} alt="heart" />
                 Lista de Desejos
               </ButtonWishList>
             </Col>
 
             <Col>
               <ButtonCart>
-                <Image src={cartIcon} alt="cart" />
+                <ImageCartIcon src={cartIcon} alt="cart" />
               </ButtonCart>
             </Col>
           </RowSearchEBotoes>

@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import Context from "../../GlobalState/Context";
 import ImagemInicialHome from "../../Images/ImagemInicialHome.svg";
-import { CarouselContainer, CarouselImage,CarouselBox } from "./BodyMain_styled";
-
+import {
+  CarouselContainer,
+  CarouselImage,
+  CarouselBox,
+} from "./BodyMain_styled";
 
 const BodyMain = () => {
   const { states, setters, requests } = useContext(Context);
@@ -26,7 +29,7 @@ const BodyMain = () => {
 
   return (
     <CarouselContainer>
-      <CarouselBox responsive={responsive}>
+      <CarouselBox removeArrowOnDeviceType={["tablet", "mobile"]} responsive={responsive}>
         <CarouselImage src={ImagemInicialHome} alt="First slide" />
 
         <CarouselImage src={ImagemInicialHome} alt="Second slide" />

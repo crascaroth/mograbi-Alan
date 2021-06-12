@@ -126,6 +126,8 @@ export const BoxText = styled.div`
 
   width: 20vw;
   height: 15vh;
+
+  font-size: 3vw;
 `;
 
 export const ButtonMaisCategorias = styled(Button)`

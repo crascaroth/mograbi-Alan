@@ -7,7 +7,7 @@ export const TextQuemSomos = styled.div`
   color: white;
   width: 30vw;
   height: 10vh;
-  font-size: 4em;
+  font-size: 4vw;
 `;
 export const BoxWithPolygons = styled.div`
   background-color: black;

@@ -1,10 +1,13 @@
 import {
     Nav,
-    Navbar
+    Navbar,
+    Image
     
   } from "react-bootstrap";
+
   import styled from "styled-components"
 
+ 
 
 
 export const TelephoneRedes = styled(Navbar)`
@@ -21,4 +24,8 @@ margin-left: 10vw;
 
 export const RedesSociais = styled(Nav)`
 margin-right: 10vw;
+`
+
+export const RedesSociaisImages = styled(Image)`
+width: 2.5vw;
 `
