@@ -7,7 +7,7 @@ export const MenuInterativo = styled(Nav)`
   width: 60vw;
   color: white;
 
-  font-size: 1.5em;
+  font-size: 1.5vw;
   height: 10vh;
 
   justify-content: space-between;
@@ -16,6 +16,9 @@ export const MenuInterativo = styled(Nav)`
 
 export const ItemSingular = styled(Nav.Link)`
   color: white;
+  :hover{
+    color: gray;
+  }
   
 `;
 

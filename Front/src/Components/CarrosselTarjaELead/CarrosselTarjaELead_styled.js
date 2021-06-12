@@ -80,7 +80,7 @@ export const ImgLead = styled.img``;
 
 export const TextoLead = styled.div`
   color: white;
-  font-size: 46px;
+  font-size: 3vw;
   width: 30vw;
 `;
 

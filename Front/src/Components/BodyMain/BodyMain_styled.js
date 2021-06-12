@@ -3,18 +3,29 @@ import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 
 export const CarouselImage = styled.img`
-  display: block;
+  display: flex;
+  
+  justify-content: center;
+
   width: auto;
   height: 50vh;
+
+  overflow: hidden;
+
+ 
+  
 `;
 
 export const CarouselContainer = styled(Nav)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+
+  width: 100%;
   height: 50vh;
+
   background-color: black;
+  
 `;
 
 

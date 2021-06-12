@@ -27,8 +27,8 @@ export const BoxProduct = styled.div`
   padding-left: 0.75vw;
 
   border: 2px solid #cccccc;
-  height: 40vh;
-  width: 18vw;
+
+  width: 20vw;
 `;
 
 export const BoxImage = styled.div`
@@ -39,8 +39,8 @@ export const BoxImage = styled.div`
 `;
 
 export const ImgProduct = styled.img`
-  height: 25vh;
-  width: auto;
+  
+  width: 100%;
   :hover {
     cursor: pointer;
   }
@@ -57,12 +57,12 @@ export const TextBox = styled.div`
 `;
 
 export const TitleProductCard = styled.div`
-  font-size: 15px;
+  font-size: 1.4vw;
   font-weight: bold;
   overflow: auto !important;
 `;
 export const Preco = styled.div`
-  font-size: 28px;
+  font-size: 2.1vw;
   font-weight: bold;
 `;
 
@@ -71,13 +71,13 @@ export const BoxButtons = styled.div`
 
   width: 100%;
 
-  margin-bottom: 0;
+  margin-bottom: 1vh;
 `;
 
 export const AdicionarCarrinho = styled(Button)`
   height: 5vh;
   border-radius: 0;
-  font-size: 20px;
+  font-size: 1.1vw;
   font-weight: bold;
 
   margin-right: 0.25vw;
@@ -85,7 +85,8 @@ export const AdicionarCarrinho = styled(Button)`
 `;
 
 export const HeartButton = styled(Button)`
-  height: 5vh;
+  
+  width: 5vw;
   border: 0;
   border-radius: 0;
   background-color: #707070;

@@ -1,22 +1,20 @@
 import React from "react";
 
-import DivQuemSomos from "./DivQuemSomos/DivQuemSomos.js"
-import CarrosselQuemSomos from "./CarrosselQuemSomos/CarrosselQuemSomos"
-import CaixaTexto from "./CaixaTexto/CaixaTexto"
+import { ContainerTexto} from "./BodyQuemSomos_styled"
+import DivQuemSomos from "./DivQuemSomos/DivQuemSomos.js";
+import CarrosselQuemSomos from "./CarrosselQuemSomos/CarrosselQuemSomos";
+import CaixaTexto from "./CaixaTexto/CaixaTexto";
 
 const BodyQuemSomos = () => {
-
-
-
   return (
     <>
-    <DivQuemSomos/>
-    <CarrosselQuemSomos/>
-    <CaixaTexto/>
+      <DivQuemSomos />
+      <ContainerTexto>
+        <CarrosselQuemSomos />
+        <CaixaTexto />
+      </ContainerTexto>
     </>
   );
-}
+};
 
-export default BodyQuemSomos
-
-
+export default BodyQuemSomos;

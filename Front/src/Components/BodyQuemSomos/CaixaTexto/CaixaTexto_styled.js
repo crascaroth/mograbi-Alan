@@ -4,6 +4,7 @@ import { Col, Row } from "react-bootstrap";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   width: 100vw;
   height: 30vh;
 
@@ -14,8 +15,7 @@ export const CaixaTextoESetas = styled.div`
   display: flex;
   align-items: center;
   width: 90vw;
-  background-color: black;
-  
+  background-color: black;  
 
   margin: 0;
   padding: 0;
@@ -33,7 +33,7 @@ export const ColunasGrid = styled(Col)`
   margin: 0 2vw;
   justify-content: left;
   align-items: center;
-  font-size: 28px;
+  font-size: 1.3vw;
   color: white;
 `;
 

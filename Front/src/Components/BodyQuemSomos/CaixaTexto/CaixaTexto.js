@@ -20,6 +20,7 @@ const CaixaTexto = () => {
           <SetaEsquerda >
             <img src={PolygonEsquerda} />
           </SetaEsquerda>
+          
           <ColunasGrid style={{gridArea: 1 / 2 / 2 / 3}}>
             A “Mograbi Tecidos” foi criada e idealizada pelos sucessores da
             tradicional “Casa Miro”, loja de tecidos no Rio de Janeiro, fundada
@@ -33,6 +34,7 @@ const CaixaTexto = () => {
             esses os obstáculos com um trabalho bem feito e consequentemente um
             estrondoso sucesso.
           </ColunasGrid>
+          
           <SetaDireita>
             <img src={PolygonDireita} />
           </SetaDireita>

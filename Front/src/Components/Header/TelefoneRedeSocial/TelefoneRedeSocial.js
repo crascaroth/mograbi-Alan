@@ -4,6 +4,7 @@ import {
   TelephoneRedes,
   Telefone,
   RedesSociais,
+  RedesSociaisImages
 } from "./TelefoneRedeSocial_styled.js";
 
 import { Nav, Navbar, Image } from "react-bootstrap";
@@ -27,15 +28,15 @@ const TelefoneRedeSocial = () => {
       <Nav className="mr-auto"></Nav>
       <RedesSociais>
         <Nav.Link>
-          <Image src={facebook} alt="facebook" />
+          <RedesSociaisImages src={facebook} alt="facebook" />
         </Nav.Link>
 
         <Nav.Link>
-          <Image src={envelope} alt="envelope" />
+          <RedesSociaisImages src={envelope} alt="envelope" />
         </Nav.Link>
 
         <Nav.Link>
-          <Image src={instagram} alt="instagram" />
+          <RedesSociaisImages src={instagram} alt="instagram" />
         </Nav.Link>
       </RedesSociais>
     </TelephoneRedes>

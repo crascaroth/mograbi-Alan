@@ -3,9 +3,23 @@ import {
     Row,
     Form,
     FormControl,
-    Button
+    Button,
+    Image
   } from "react-bootstrap";
   import styled from "styled-components"
+
+  
+
+  export const BaseImage = styled(Image)`
+  width: 3vw;   
+  `
+
+  export const ImageSearchIcon = styled(BaseImage)`
+  width: 1.5vw;
+  `
+  export const ImagePersonIcon = styled(BaseImage)``
+  export const ImageHeartIcon = styled(BaseImage)``
+  export const ImageCartIcon = styled(BaseImage)``
 
 
 export const ColLogoMograbi = styled(Col)`
@@ -45,10 +59,10 @@ width: 25vw;
 ` 
 export const InputSearchBar = styled.input`
 border-radius: 0;
-width: 20vw;
+width: 18vw;
 height: 7vh;
 margin-right: 1vw;
-font-size: 1.5em;
+font-size: 1vw;
 `
 
 const ButtonBase = styled(Button)`
@@ -59,7 +73,11 @@ border: 0.15em solid black;
 border-radius: 0;
 height: 8vh;
 width: 10vw;
-font-size: 1.5em;
+font-size: 1vw;
+`
+
+export const ImageMograbiLogo = styled(Image)`
+overflow: scroll;
 `
 
 export const ButtonMinhaConta = styled(ButtonBase)`

@@ -5,7 +5,7 @@ export const BoxCategoryName = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;
+  width: 100vw;
   margin-bottom: 5vh;
   /* background-color: blue; */
 `;
