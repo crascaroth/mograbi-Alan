@@ -16,22 +16,37 @@ export const MenuInterativo = styled(Nav)`
 
 export const ItemSingular = styled(Nav.Link)`
   color: white;
-  :hover{
+  :hover {
     color: gray;
   }
-  
 `;
 
 export const ItemDropdown = styled(NavDropdown)`
+  
+  img{
+    background-color:black;
+  }
+  div{
+    border: 0;
+    border-radius: 0;
+
+    padding-top: 0;
+    padding-bottom:0;
+  }
   a {
     color: white;
   }
 `;
 
+export const ItemImageDropdown = styled(NavDropdown.Item)`
+width:100%;
+  background-color: black !important;
+`;
+
 export const ItemDropdownModal = styled(ItemDropdown.Item)`
-background-color: white;
-color: black !important;
-`
+  background-color: yellow;
+  color: black !important;
+`;
 
 export const MenuSemImages = styled.div`
   color: white !important;

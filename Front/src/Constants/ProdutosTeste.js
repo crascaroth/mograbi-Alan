@@ -20,7 +20,8 @@ export const entradaMenu = [
         categoryName: "Tricoline Lisa"        
     },
     {
-        categoryName: "Tricoline Estampada"
+        categoryName: "Tricoline Estampada",
+        subcategories: ["Floral", "Estampada", "Ver Todos"]
     },
     {
         categoryName: "Viscose Lisa"

@@ -18,6 +18,8 @@ export const BoxItem = styled(Col)`
 `;
 
 export const GridContainer = styled.div`
+margin:auto;
+padding:0;
   display: grid;
   grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -105,6 +107,7 @@ export const Faixa = styled.div`
 
   width: 25vw;
   height: 17vh;
+  padding: 20vh 1vw;
 
   font-size: 3.25em;
   color: white;
