@@ -44,7 +44,7 @@ width:100%;
 `;
 
 export const ItemDropdownModal = styled(ItemDropdown.Item)`
-  background-color: yellow;
+  background-color: white;
   color: black !important;
 `;
 
