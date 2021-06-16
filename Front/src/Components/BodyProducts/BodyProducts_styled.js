@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 import Button from "react-bootstrap/Button";
 
-export const Breadcrumbs = styled.div`
-  background-color: orange;
+export const Breadcrumbsdiv = styled.div`
+  /* background-color: orange; */
 `;
 
 export const CategoryName = styled.div`
@@ -33,5 +33,6 @@ export const Pages = styled.div`
 `;
 export const FiltroTags = styled.div`
   grid-area: FiltroTags;
-  background-color: green;
+  padding:0 4vw;
+  /* background-color: green; */
 `;

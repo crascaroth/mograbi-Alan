@@ -3,15 +3,17 @@ import Context from "../../GlobalState/Context";
 
 import {
   GridContainer,
-  Breadcrumbs,
   Pages,
   FiltroTags,
-  
+  Breadcrumbsdiv,
 } from "./BodyProducts_styled";
 
 import ProductsGrid from "./ProductsGrid/ProductsGrid";
 import CategoryName from "./CategoryName/CategoryName.js";
 import BoxFiltroTags from "./BoxFiltroTags/BoxFiltroTags.js";
+
+import Breadcrumbs from "./Breadcrumbs/Breadcrumbs.js";
+import Pagination from "./Pagination/Pagination.js";
 
 const BodyProducts = () => {
   const { states, setters, requests } = useContext(Context);
@@ -20,14 +22,18 @@ const BodyProducts = () => {
 
   return (
     <>
-      {/* <Breadcrumbs>Breadcrumbs</Breadcrumbs> */}
+      <Breadcrumbsdiv>
+        <Breadcrumbs />
+      </Breadcrumbsdiv>
       <CategoryName />
       <GridContainer>
-        {/* <FiltroTags>
+        <FiltroTags>
           <BoxFiltroTags />
-        </FiltroTags> */}
+        </FiltroTags>
         <ProductsGrid />
-        {/* <Pages>Pages</Pages> */}
+        {/* <Pages>
+          <Pagination />
+        </Pages> */}
       </GridContainer>
     </>
   );

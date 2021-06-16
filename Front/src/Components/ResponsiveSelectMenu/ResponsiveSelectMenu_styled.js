@@ -46,6 +46,11 @@ width:100%;
 export const ItemDropdownModal = styled(ItemDropdown.Item)`
   background-color: white;
   color: black !important;
+  
+
+  :active{
+    background-color:gray;
+  }
 `;
 
 export const MenuSemImages = styled.div`

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Context from "../../../GlobalState/Context";
 
 import {
@@ -26,15 +26,39 @@ const ProductsGrid = () => {
   const params = useParams();
   // console.log("params", params);
 
+  
   const { states, setters, requests } = useContext(Context);
 
   const produtos = entrada;
+
+  const ProdutosSliced = produtos.slice(
+    (states.page - 1) * 12,
+    states.page * 12
+  );
+
+  let DefinePagination = () => {
+    let ProdutosState = [];
+
+    for (let i = 0; i < produtos.length; i++) {
+      if (
+        (produtos[i].productCtg === params.categoryName &&
+          params.categoryName !== "Ver Todos") ||
+        params.category === "Ver Todos"
+      ) {
+        ProdutosState.push(produtos[i]);
+      }
+    }
+    setters.setPagination(ProdutosState.length);
+  };
+
+  useEffect(() => {
+    DefinePagination();
+  }, []);
   // const produtos = states.products
 
   return (
     <Products>
       {produtos.map((product) => {
-        console.log(produtos.productCtg, "===", params.categoryName);
         if (
           product.productCtg === params.categoryName &&
           params.categoryName !== "Ver Todos"
