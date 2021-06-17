@@ -128,7 +128,7 @@ export const BoxText = styled.div`
   flex-wrap: wrap;
 
   width: 20vw;
-  height: 15vh;
+  height: 20vh;
 
   font-size: 3vw;
 `;

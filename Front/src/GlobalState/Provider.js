@@ -8,6 +8,8 @@ const Provider = (props) => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [productDetail, setProductDetail] = useState();
+  const [pagination, setPagination] = useState(0);
+  const [page, setPage] = useState(1);
 
   const getAllCategories = async () => {
     await axios
@@ -68,20 +70,28 @@ const Provider = (props) => {
   };
 
   const getProductDetails = async (id) => {
-    async function fetchData (){
-    await axios.get(BASE_URL + `/dev/product/${id}`).then((res) => {
-      console.log(res.data);
-      setProductDetail(res.data[0]);
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-  }
-  fetchData()
+    async function fetchData() {
+      await axios
+        .get(BASE_URL + `/dev/product/${id}`)
+        .then((res) => {
+          console.log(res.data);
+          setProductDetail(res.data[0]);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    fetchData();
   };
 
-  const states = { categories, products, productDetail };
-  const setters = { setCategories, setProducts, setProductDetail };
+  const states = { categories, products, productDetail, pagination, page };
+  const setters = {
+    setCategories,
+    setProducts,
+    setProductDetail,
+    setPagination,
+    setPage,
+  };
   const requests = {
     getAllCategories,
     getAllProducts,
