@@ -4,12 +4,12 @@
 
 just install all dependencies
 
-~
-npm install
-~
+
+> npm install
+
 
 and start the program using
 
-~
-npm start
-~
+
+> npm start
+
