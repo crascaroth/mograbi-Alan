@@ -2,8 +2,14 @@
 
 ## Setting up
 
-just configure using 
+just install all dependencies
 
-~~
+~
 npm install
-~~
+~
+
+and start the program using
+
+~
+npm start
+~
